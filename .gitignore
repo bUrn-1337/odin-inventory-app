@@ -1,2 +1,6 @@
 #ignore environment variables (not spilling my secrets so easily)
 .env
+
+#ignore node modules
+
+node_modules
