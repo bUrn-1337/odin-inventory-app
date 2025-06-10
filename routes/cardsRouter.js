@@ -3,7 +3,7 @@ const cardsController = require("../controllers/cardsController");
 const cardsRouter = Router();
 
 cardsRouter.get("/create", cardsController.cardCreateGet);
-cardsRouter.get("/:cardId", cardsController.cardListGet);
+cardsRouter.get("/:cardId", cardsController.cardGet);
 cardsRouter.get("/:cardId/update", cardsController.cardUpdateGet);
 
 cardsRouter.post("/create", cardsController.cardCreatePost);

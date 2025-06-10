@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Card</h1>
+    <form action="/cards/<%= locals.cardId %>" method="POST">
+        <label for="name">
+            Name:
+            <input type="text" name="name" id="name">
+        </label>
+        <label for="health">
+            Health:
+            <input type="text" name="health" id="health">
+        </label>
+        <label for="damage">
+            Damage:
+            <input type="text" name="damage" id="damage">
+        </label>
+        <label for="rarity">
+            Rarity:
+            <input type="text" name="rarity" id="rarity">
+        </label>
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+</body>
+</html>

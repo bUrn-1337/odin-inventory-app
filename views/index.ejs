@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>rarities</title>
+</head>
+<body>
+  <h1>rarities</h1>
+  <ul>
+    <% if (locals.rarities) {%>
+      <% rarities.forEach(rarity => { %>
+        <li>
+          <a href="/rarities/<%=rarity.id%>">ID: <%= rarity.id %>, Name: <%= rarity.rarity_name %></a>
+          <a href="/rarities/<%=rarity.id%>/update">Update this rarity</a>
+        </li>
+      <% }); %>
+    <% } %>
+  </ul>
+  <a href="/rarities/create">Create a rarity</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rarity</title>
+</head>
+<body>
+  <% if (cards && cards.length > 0) { %>
+    <h1><%= cards[0].rarity %></h1>
+    <ul>
+      <% cards.forEach(card => { %>
+        <li>
+          ID: <%= card.id %>, Name: <%= card.name %> Health: <%= card.health %> Damage: <%= card.damage %>
+          <br>
+          <a href="/cards/<%= card.id %>"><%= card.name %></a> 
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <h1>No cards found for this rarity.</h1>
+  <% } %>
+  
+  <a href="/createCard">Create a card</a>
+</body>
+</html>
